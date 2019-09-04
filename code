@@ -1,0 +1,25 @@
+https://omerk.github.io/lcdchargen/
+
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+byte a[8] = {
+  0b00000,
+  0b11111,
+  0b01110,
+  0b00100,
+  0b10001,
+  0b11011,
+  0b11111,
+  0b11111
+};
+
+void setup() 
+{
+  lcd.createChar(0, a);
+  lcd.begin(16, 2);  
+  lcd.write(byte(0));
+}
+
+void loop() {}
